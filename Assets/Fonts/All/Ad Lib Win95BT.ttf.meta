@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8b72eca5f7a596442845c0774f670ce2
+timeCreated: 1501523814
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AdLib Win95BT
+  fontNames:
+  - AdLib Win95BT
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

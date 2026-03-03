@@ -1,0 +1,89 @@
+using Core;
+using DataTransfer.Data;
+using Math;
+using TMPro;
+using UnityEngine;
+using Utils;
+using War.Systems.Blasts;
+using War.Systems.Updating;
+using Time = Utils.Time;
+
+
+namespace War.Entities.Projectiles {
+
+    public class Limonka : MobileEntity, IUpdatable, IBlastable {
+
+        private int        _explodesAt;
+        private GameObject _gameObject;
+        private GameObject _grenadeGameObject;
+        private TMP_Text   _text;
+
+
+        public Limonka (int timer) {
+            MassRank    = Balance.GrenadeMassRank;
+            _explodesAt = timer;
+        }
+
+
+        protected override void OnDespawn () {
+            base.OnDespawn ();
+            Object.Destroy (_gameObject);
+        }
+
+
+        public override void OnSpawn () {
+            _.War.UpdateSystem.Add (this);
+            _.War.BlastSystem .Add (this);
+
+            AddCircleCollider (Balance.ShellRadius);
+
+            _gameObject = new GameObject ("limonka");
+            _gameObject.transform.localPosition = (Vector3) Position;
+            _grenadeGameObject = Object.Instantiate (_.War.Assets.Limonka, _gameObject.transform, false);
+            var canvas  = Object.Instantiate (_.War.Assets.Canvas, _gameObject.transform, false).GetComponent <Canvas> ();
+            canvas.worldCamera = Camera.main;
+            var area    = Object.Instantiate (_.War.Assets.TextAreaBottom, canvas.transform, false);
+            _text       = Object.Instantiate (_.War.Assets.Text24, area.transform, false).GetComponent <TMP_Text> ();
+            _text.color = Colors.White;
+            _text.text  = Time.ToSeconds (_explodesAt).ToString ();
+            
+            _explodesAt += _.War.Time;
+
+            PositionChanged += (from, to) => _gameObject.transform.localPosition = (Vector3) to;
+        }
+
+
+        public bool Alive => !Despawned;
+
+
+        public void TakeBlast (XY impulse) {
+            Velocity += impulse;
+        }
+
+
+        public void Update (TurnData td) {
+            _.War.Wait ();
+            Velocity.Y += WarScene.Gravity;
+            if (_.War.Time >= _explodesAt) {
+                Explode ();
+            }
+            else {
+                _text.text = Time.CeilToSeconds (_explodesAt - _.War.Time).ToString ();
+            }
+        }
+
+
+        private void Explode () {
+            Despawn ();
+            for (int i = 0; i < 6; i++) {
+                _.War.Spawn (
+                    new LimonkaCluster (),
+                    Position,
+                    Danmaku.Shotgun (XY.Up, Mathf.PI / 6, Balance.ClusterMinSpeed, Balance.ClusterMaxSpeed)
+                );
+            }
+        }
+
+    }
+
+}

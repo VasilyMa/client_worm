@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: aea524bc2301c874a8f9e7899c275fad
+timeCreated: 1515757242
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 36
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Freakomix by Avdo
+  fontNames:
+  - Freakomix by Avdo
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

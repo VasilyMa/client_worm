@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 87b826a1c47452b4fa49fabd540e2602
+timeCreated: 1501523827
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Phenomena
+  fontNames:
+  - Phenomena
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

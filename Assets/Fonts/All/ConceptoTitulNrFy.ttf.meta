@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f6f01bd5085cc80448297f12f48b5d8e
+timeCreated: 1501523819
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: a_ConceptoTitulNrFy
+  fontNames:
+  - a_ConceptoTitulNrFy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

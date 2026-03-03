@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b718f4ee9ffcc684e97af2d7eec01300
+timeCreated: 1501523808
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AA Clobberin Time Smooth
+  fontNames:
+  - AA Clobberin Time Smooth
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

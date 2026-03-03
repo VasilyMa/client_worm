@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 07cdde3a69ac1e041ad1b9214c54a394
+timeCreated: 1519030448
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 72
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Feast of Flesh BB(RUS BY LYAJKA
+  fontNames:
+  - Feast of Flesh BB(RUS BY LYAJKA
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
